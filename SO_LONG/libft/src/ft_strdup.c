@@ -6,7 +6,7 @@
 /*   By: wmillett <wmillett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 21:27:33 by wmillett          #+#    #+#             */
-/*   Updated: 2023/05/23 16:16:03 by wmillett         ###   ########.fr       */
+/*   Updated: 2023/05/24 15:20:47 by wmillett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(char *src, char *dst)
 {
-	int		i;
-	int		n;
+	int i;
+	int n;
 
 	if (src == NULL)
 		return (NULL);

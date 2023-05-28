@@ -6,7 +6,7 @@
 /*   By: wmillett <wmillett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 17:00:11 by wmillett          #+#    #+#             */
-/*   Updated: 2023/05/28 11:48:43 by wmillett         ###   ########.fr       */
+/*   Updated: 2023/05/24 16:57:48 by wmillett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,14 @@ int	walls(t_map mpack)
 	int	j;
 	int	last;
 
+
+
 	j = 0;
 	while (mpack.map[0][j])
 		if (mpack.map[0][j++] != '1')
 			return (ERROR);
 	last = ft_strlen(mpack.map[0]);
+	
 	last--;
 	j = 1;
 	while (j < mpack.size.y)

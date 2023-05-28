@@ -6,7 +6,7 @@
 /*   By: wmillett <wmillett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 21:37:53 by wmillett          #+#    #+#             */
-/*   Updated: 2023/05/28 11:11:35 by wmillett         ###   ########.fr       */
+/*   Updated: 2023/05/24 15:14:45 by wmillett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ mlx_image_t	*render_mc(t_game *gpack, int move)
 	else if (move == 'F')
 		render_items(gpack, 'F');
 	exit_open(gpack);
-	print_move(move, gpack);
+	print_move(move);
 	return (mc);
 }
 

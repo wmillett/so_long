@@ -6,7 +6,7 @@
 /*   By: wmillett <wmillett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 16:21:13 by wmillett          #+#    #+#             */
-/*   Updated: 2023/05/28 11:31:40 by wmillett         ###   ########.fr       */
+/*   Updated: 2023/05/24 15:22:51 by wmillett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,18 @@ typedef struct s_info
 }			t_all;
 
 int			ft_strlen(char *s);
+
 char		*ft_strdup(char *src, char *dst);
-char		*ft_itoa(int n);
+
 //get_next_line
 char		*ft_get_next_line(int fd);
+
 void		ft_bzero(void *b, size_t len);
+
 void		*ft_sfree(void *str);
+
 void		*ft_calloc(size_t count, size_t size);
+
 char		*ft_strjoin(char *s1, char *s2);
+
 #endif

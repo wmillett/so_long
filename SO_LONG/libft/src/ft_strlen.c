@@ -6,16 +6,16 @@
 /*   By: wmillett <wmillett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 17:49:55 by wmillett          #+#    #+#             */
-/*   Updated: 2023/05/19 16:33:49 by wmillett         ###   ########.fr       */
+/*   Updated: 2023/05/24 15:20:51 by wmillett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int ft_strlen(char *s)
+int	ft_strlen(char *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])

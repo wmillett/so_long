@@ -6,7 +6,7 @@
 #    By: wmillett <wmillett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/17 11:55:15 by wmillett          #+#    #+#              #
-#    Updated: 2023/05/28 11:32:56 by wmillett         ###   ########.fr        #
+#    Updated: 2023/05/24 13:33:09 by wmillett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,9 +24,11 @@ SRC =	ft_strlen.c\
 		get_next_line.c\
 		get_next_line_utils.c\
 		ft_strdup.c\
-		ft_itoa.c\
+
 
 VPATH = ${SRCDIR}
+
+
 OBJDIR = obj
 OBJS = $(addprefix ${OBJDIR}/, ${SRC:%.c=%.o})
 

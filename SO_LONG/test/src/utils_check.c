@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   utils_check.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wmillett <wmillett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 15:35:12 by wmillett          #+#    #+#             */
-/*   Updated: 2023/02/09 16:25:07 by wmillett         ###   ########.fr       */
+/*   Created: 2023/05/15 18:17:56 by wmillett          #+#    #+#             */
+/*   Updated: 2023/05/24 15:13:39 by wmillett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/so_long.h"
 
-int	ft_putchar(char c)
+void	check_render(int32_t check, t_game *gpack)
 {
-	int	checksafety;
+	if (check == ERROR)
+		printerror_render(0, gpack, 0);
+}
 
-	checksafety = write(1, &c, 1);
-	if (checksafety == ERROR)
-		return (ERROR);
-	return (1);
+void	check_fd(int fd, t_game *gpack, int type)
+{
+	if (fd < 0 || fd > INT_MAX)
+	{
+		if (type == 1)
+			printerror_pre(4);
+		else if (type == 2)
+			printerror_mem(4, gpack);
+	}
 }

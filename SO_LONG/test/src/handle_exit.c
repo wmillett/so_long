@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   handle_exit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wmillett <wmillett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/13 13:32:56 by wmillett          #+#    #+#             */
-/*   Updated: 2023/04/25 16:39:14 by wmillett         ###   ########.fr       */
+/*   Created: 2023/05/16 15:37:04 by wmillett          #+#    #+#             */
+/*   Updated: 2023/05/23 20:24:32 by wmillett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/so_long.h"
 
-char	*ft_strchr(char *s, int c)
+void	leave(t_game *gpack)
 {
-	size_t	i;
-	size_t	n;
+	allfree(gpack, 0);
+	write(2, "\033[0;32m", 7);
+	printf("Program exited successfully.\n");
+	write(2, "\033[0m", 4);
+	exit(0);
+}
 
-	if (!s)
-		return (NULL);
-	n = ft_strlen(s);
-	i = 0;
-	while (i <= n)
-	{
-		if (((char *)s)[i] == (unsigned char)c)
-			return ((char *)s + i);
-		i++;
-	}
-	return (NULL);
+void	win(t_game *gpack)
+{
+	allfree(gpack, 1);
+	write(2, "\033[1;34m", 7);
+	print_move('T');
+	write(2, "\033[0m", 4);
+	write(2, "\033[0;32m", 7);
+	printf("Congratulations, you escaped!\n");
+	write(2, "\033[0m", 4);
+	exit(0);
 }
