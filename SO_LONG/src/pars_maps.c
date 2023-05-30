@@ -6,7 +6,7 @@
 /*   By: wmillett <wmillett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 17:00:11 by wmillett          #+#    #+#             */
-/*   Updated: 2023/05/28 11:56:14 by wmillett         ###   ########.fr       */
+/*   Updated: 2023/05/30 15:12:29 by wmillett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,7 @@ t_map	check_path(t_map mpack, t_point cur)
 	if (mpack.map2[cur.y][cur.x] == '1' || mpack.map2[cur.y][cur.x] == 'X')
 		return (mpack);
 	if (mpack.map2[cur.y][cur.x] == 'E')
-		exit++;
+		exit = 1;
 	if (mpack.map2[cur.y][cur.x] == 'C')
 		nb_col++;
 	mpack.map2[cur.y][cur.x] = 'X';

@@ -6,7 +6,7 @@
 /*   By: wmillett <wmillett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 16:34:46 by wmillett          #+#    #+#             */
-/*   Updated: 2023/05/24 15:14:22 by wmillett         ###   ########.fr       */
+/*   Updated: 2023/05/30 15:18:44 by wmillett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ static void	ft_mchook(mlx_key_data_t k, void *param)
 	int		move;
 
 	gpack = param;
-	if (k.key == MLX_KEY_RIGHT && k.action == 1)
+	if (k.key == MLX_KEY_D && k.action == 1)
 		move = 'R';
-	if (k.key == MLX_KEY_LEFT && k.action == 1)
+	if (k.key == MLX_KEY_A && k.action == 1)
 		move = 'L';
-	if (k.key == MLX_KEY_UP && k.action == 1)
+	if (k.key == MLX_KEY_W && k.action == 1)
 		move = 'U';
-	if (k.key == MLX_KEY_DOWN && k.action == 1)
+	if (k.key == MLX_KEY_S && k.action == 1)
 		move = 'D';
 	if (move && k.action == 1)
 		render_mc(param, move);

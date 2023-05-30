@@ -6,7 +6,7 @@
 /*   By: wmillett <wmillett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 16:46:19 by wmillett          #+#    #+#             */
-/*   Updated: 2023/05/24 13:45:48 by wmillett         ###   ########.fr       */
+/*   Updated: 2023/05/30 15:15:00 by wmillett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ static int	ft_ismapvalid(t_game *gpack)
 		printerror_pars3(9, gpack);
 	gpack->mpack = find_pos(gpack->mpack);
 	gpack->mpack = duplicate_map(gpack);
+	gpack->mpack.missing_exit = 0;
 	gpack->mpack = check_path(gpack->mpack, gpack->mpack.begin);
 	if (gpack->mpack.missing_exit == -1)
 		printerror_pars3(7, gpack);
