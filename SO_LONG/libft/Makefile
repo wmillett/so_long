@@ -6,7 +6,7 @@
 #    By: wmillett <wmillett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/17 11:55:15 by wmillett          #+#    #+#              #
-#    Updated: 2023/05/28 11:32:56 by wmillett         ###   ########.fr        #
+#    Updated: 2023/05/28 19:31:39 by wmillett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ OBJDIR = obj
 OBJS = $(addprefix ${OBJDIR}/, ${SRC:%.c=%.o})
 
 ${OBJDIR}/%.o : %.c
-	@${CC} ${FLAGS} -I${INCDIR} -I. -c $< -o $@
+	@${CC} ${CFLAGS} -I${INCDIR} -I. -c $< -o $@
 
 all: $(NAME)
 

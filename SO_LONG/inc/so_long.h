@@ -6,7 +6,7 @@
 /*   By: wmillett <wmillett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 17:10:51 by wmillett          #+#    #+#             */
-/*   Updated: 2023/05/28 11:11:58 by wmillett         ###   ########.fr       */
+/*   Updated: 2023/05/28 11:56:43 by wmillett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ int				walls(t_map mpack);
 int				objects(t_game *gpack, int i, int j);
 t_map			check_path(t_map mpack, t_point cur);
 //render_items -----------------------------------
-void			print_move(int move, t_game* gpack);
+void			print_move(int move, t_game *gpack);
 void			render_items(t_game *gpack, int first);
 //render_map -------------------------------------
 t_game			*render_static_map(t_game *gpack, int test);

@@ -6,7 +6,7 @@
 #    By: wmillett <wmillett@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/08 08:48:00 by wmillett          #+#    #+#              #
-#    Updated: 2023/05/24 15:11:52 by wmillett         ###   ########.fr        #
+#    Updated: 2023/05/28 18:54:47 by wmillett         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME = so_long
 LIBFT = libft
 #Command variables ------------------------
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g
 MK = mkdir -p
 RM = rm -rf
 USER = $(shell whoami)
